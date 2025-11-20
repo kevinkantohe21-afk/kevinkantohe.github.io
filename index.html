@@ -68,19 +68,19 @@
 
             <div class="row text-center mb-3">
                 <div class="col">
-                    <h2>About Me</h2>
+                    <h2 class="btn btn-primary">About Me</h2>
                 </div>
             </div>
 
             <div class="row justify-content-center fs-5 text-center">
-                <div class="col-sm-6" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-sm-6 mb-5" data-aos="fade-right" data-aos-duration="1000">
                     <p>Saya adalah seorang mahasiswa di Akademi Manajemen Informatika dan Komputer (AMIK) Manado yang memiliki ketertarikan besar pada dunia teknologi dan pengembangan sistem. Saya selalu berusaha untuk belajar hal-hal baru, terutama yang berkaitan dengan pemrograman dan pengelolaan data. Dengan semangat untuk terus berkembang, saya berkomitmen membangun kemampuan yang dapat bermanfaat bagi diri sendiri maupun orang lain dalam bidang teknologi informasi.</p>
                 </div>
-                <div class="col-sm-6 " data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-sm-6 mb-5" data-aos="fade-right" data-aos-duration="1000">
                     <p>Di luar kegiatan akademik, saya memiliki hobi mendaki gunung. Kegiatan ini bagi saya bukan hanya sekadar aktivitas fisik, tetapi juga menjadi cara untuk melatih ketahanan diri, disiplin, serta kemampuan beradaptasi dalam berbagai kondisi. Melalui pendakian, saya belajar untuk menghargai proses, menikmati perjalanan, dan memahami pentingnya kerja sama ketika menghadapi tantangan di alam terbuka. Setiap puncak yang berhasil dicapai memberikan motivasi baru untuk terus berkembang dan tidak mudah menyerah.</p>
                 </div>
                 <div class="col-sm-8" data-aos="fade-right" data-aos-duration="1000">
-                    <p>Di luar kegiatan akademik, saya memiliki hobi mendaki gunung. Kegiatan ini bagi saya bukan hanya sekadar aktivitas fisik, tetapi juga menjadi cara untuk melatih ketahanan diri, disiplin, serta kemampuan beradaptasi dalam berbagai kondisi. Melalui pendakian, saya belajar untuk menghargai proses, menikmati perjalanan, dan memahami pentingnya kerja sama ketika menghadapi tantangan di alam terbuka. Setiap puncak yang berhasil dicapai memberikan motivasi baru untuk terus berkembang dan tidak mudah menyerah.</p>
+                    <p>Secara kepribadian, saya cenderung merupakan individu yang pendiam dan lebih banyak mengamati sebelum bertindak. Meskipun demikian, saya tetap mampu berkomunikasi dengan baik ketika dibutuhkan dan selalu berusaha menjaga sikap profesional dalam setiap situasi.</p>
                 </div>
             </div>
             
@@ -101,7 +101,7 @@
 
         <div class="container">
 
-            <div class="row text-center mb-3">
+            <div class="row text-center mb-5">
                 <div class="col">
                     <h2>My Projects</h2>
                 </div>
@@ -109,7 +109,7 @@
 
             <div class="row justify-content-center">
 
-                <div class="col-sm-4 mb-3" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="50">
+                <div class="col-sm-4 mb-4" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="50">
                     <div class="card">
                         <a href="404.html">
                             <img src="img/projects/project1.jpg" class="card-img-top" alt="project1">
@@ -120,8 +120,8 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4 mb-3" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="75">
-                    <div class="card col-sm">
+                <div class="col-sm-4 mb-4" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="75">
+                    <div class="card">
                         <a href="404.html">
                             <img src="img/projects/project2.jpg" class="card-img-top" alt="project2">
                         </a>
@@ -131,8 +131,8 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4 mb-3" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="100">
-                    <div class="card col-sm">
+                <div class="col-sm-4 mb-5" data-aos="zoom-in-right" data-aos-duration="500" data-aos-delay="100">
+                    <div class="card">
                         <a href="404.html">
                             <img src="img/projects/project3.jpg" class="card-img-top" alt="project3">
                         </a>
@@ -174,7 +174,7 @@
                         <strong>Terima kasih!</strong> Pesan anda sudah kami terima
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                    <form name="ardywsptr-contact-form">
+                    <form name="submit-to-google-sheet">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Lengkap</label>
                             <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
@@ -260,21 +260,19 @@
     <!-- end script GSAP -->
 
     <!-- javascript DOM -->
-    <script>
-        const scriptURL =
-            'https://script.google.com/macros/s/AKfycbxRfVAR43n5syKICh26fm_Jxoo3cHEWgefiV-1c92JIqL-V_iVeO0y_Rv223oOUk0cWKw/exec';
-        const form = document.forms['ardywsptr-contact-form'];
+
+<script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxyobwKjcwxXh4hUIBUqb1zWXwUGSjnbRGonbqNgwb1UkTZxYaosSDmH4ZuWU8o1nH0/exec'
+  const form = document.forms['submit-to-google-sheet']
         const btnKirim = document.querySelector(".btn-kirim");
         const btnLoading = document.querySelector(".btn-loading");
         const myAlert = document.querySelector(".alert");
-
         form.addEventListener('submit', e => {
             e.preventDefault()
             // ketika tombol submit diklik
             // tampilkan tombol loading, hilangkan tombol kirim
             btnLoading.classList.toggle("d-none");
             btnKirim.classList.toggle("d-none");
-
             fetch(scriptURL, {
                     method: 'POST',
                     body: new FormData(form)
@@ -292,6 +290,9 @@
                 .catch(error => console.error('Error!', error.message))
         })
     </script>
+
+
+
 </body>
 
 </html>
